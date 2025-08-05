@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizCraze - Interactive Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Place in <head> -->
+    <!-- Add this in <head> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="quiz-container">
+        <!-- Start Screen -->
+        <div class="start-screen" id="startScreen">
+            <div class="quiz-header">
+                <h1 class="quiz-title">QuizCraze</h1>
+                <p class="quiz-subtitle">Test Your Knowledge in Style!</p>
+            </div>
+            <div class="start-description">
+                Welcome to QuizCraze! Challenge yourself with our interactive quiz featuring multiple-choice questions, multi-select options, and fill-in-the-blank challenges. Are you ready to test your knowledge and achieve greatness?
+            </div>
+            <button class="btn" onclick="startQuiz()">
+                <i class="fas fa-play"></i>
+                Start Quiz
+            </button>
+        </div>
+
+        <!-- Question Screen -->
+        <div class="question-screen" id="questionScreen">
+            <div class="quiz-header">
+                <h1 class="quiz-title">QuizCraze</h1>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <div class="question-counter" id="questionCounter">Question 1 of 10</div>
+            </div>
+
+            <div class="question-card">
+                <div class="question-type" id="questionType">Single Choice</div>
+                <div class="question-text" id="questionText">Loading question...</div>
+                <div class="options-container" id="optionsContainer">
+                    <!-- Options will be populated by JavaScript -->
+                </div>
+                <div class="feedback-message" id="feedbackMessage"></div>
+            </div>
+
+            <div class="quiz-controls">
+                <button class="btn btn-secondary" onclick="previousQuestion()" id="prevBtn">
+                    <i class="fas fa-arrow-left"></i>
+                    Previous
+                </button>
+                <button class="btn" onclick="nextQuestion()" id="nextBtn">
+                    Next
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div class="result-screen" id="resultScreen">
+            <div class="result-icon" id="resultIcon">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <h2 class="result-title" id="resultTitle">Quiz Complete!</h2>
+            <div class="result-score" id="resultScore">Your Score: 0/10</div>
+            <div class="result-message" id="resultMessage">Great job on completing the quiz!</div>
+
+            <div class="result-details">
+                <div class="result-stat">
+                    <span>Correct Answers:</span>
+                    <span id="correctCount">0</span>
+                </div>
+                <div class="result-stat">
+                    <span>Incorrect Answers:</span>
+                    <span id="incorrectCount">0</span>
+                </div>
+                <div class="result-stat">
+                    <span>Accuracy:</span>
+                    <span id="accuracyRate">0%</span>
+                </div>
+            </div>
+
+            <div class="result-actions">
+                <button class="btn" onclick="restartQuiz()">
+                    <i class="fas fa-redo"></i>
+                    Play Again
+                </button>
+                <button class="btn btn-orange" onclick="reviewAnswers()">
+                    <i class="fas fa-eye"></i>
+                    Review Answers
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
