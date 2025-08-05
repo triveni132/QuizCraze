@@ -6,7 +6,7 @@
 
 ## 🔗 Live Demo
 
-👉 [Click here to try QuizCraze](https://yourusername.github.io/quizcraze/)  
+👉 [Click here to try (https://quiz-craze-ten.vercel.app/)]  
 
 ---
 
@@ -28,6 +28,4 @@
 - **Fonts:** Poppins (Google Fonts)
 
 
-
-## 📁 Folder Structure
 
